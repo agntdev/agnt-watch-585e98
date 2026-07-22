@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Set Alert",
+    "steps": [
+      {
+        "expect": [
+          {
+            "method": "sendMessage",
+            "payload": {
+              "text": "Configure price threshold or percentage alert"
+            }
+          }
+        ],
+        "send": {
+          "callback": "alert:create"
+        }
+      }
+    ]
+  }
+]
