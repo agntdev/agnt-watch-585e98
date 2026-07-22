@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Daily summary with empty watchlist shows add coin prompt",
+    "steps": [
+      {
+        "send": { "callback": "daily:summary" },
+        "expect": [
+          {
+            "method": "editMessageText",
+            "payload": {
+              "text": "📊 Your watchlist is empty.\n\nTap ➕ Add Coin to start tracking."
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

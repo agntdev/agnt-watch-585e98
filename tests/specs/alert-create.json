@@ -1,19 +1,17 @@
 [
   {
-    "name": "Set Alert",
+    "name": "Set Alert button shows empty watchlist prompt",
     "steps": [
       {
+        "send": { "callback": "alert:create" },
         "expect": [
           {
-            "method": "sendMessage",
+            "method": "editMessageText",
             "payload": {
-              "text": "Configure price threshold or percentage alert"
+              "text": "🔔 To set an alert, you need coins in your watchlist first.\n\nTap ➕ Add Coin to get started."
             }
           }
-        ],
-        "send": {
-          "callback": "alert:create"
-        }
+        ]
       }
     ]
   }
