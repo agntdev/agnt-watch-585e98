@@ -1,19 +1,17 @@
 [
   {
-    "name": "Owner Dashboard",
+    "name": "Owner Dashboard without OWNER_USER_ID shows access required",
     "steps": [
       {
+        "send": { "callback": "owner:metrics" },
         "expect": [
           {
-            "method": "sendMessage",
+            "method": "editMessageText",
             "payload": {
-              "text": "Show admin metrics (requires owner authentication)"
+              "text": "🔒 Owner access required.\n\nSet the OWNER_USER_ID environment variable to your Telegram user ID."
             }
           }
-        ],
-        "send": {
-          "callback": "owner:metrics"
-        }
+        ]
       }
     ]
   }

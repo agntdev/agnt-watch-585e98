@@ -1,19 +1,17 @@
 [
   {
-    "name": "Add Coin",
+    "name": "Add Coin button shows popular coins",
     "steps": [
       {
+        "send": { "callback": "watchlist:add" },
         "expect": [
           {
-            "method": "sendMessage",
+            "method": "editMessageText",
             "payload": {
-              "text": "Open ticker selection menu"
+              "text": "➕ <b>Add Coin to Watchlist</b>\n\nChoose a popular coin or type a name to search."
             }
           }
-        ],
-        "send": {
-          "callback": "watchlist:add"
-        }
+        ]
       }
     ]
   }
